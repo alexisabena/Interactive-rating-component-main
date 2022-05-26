@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -12,6 +16,8 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); */
 
     :root{
       --clr-main: hsl(25, 97%, 53%);
@@ -49,6 +55,8 @@
     }
 
     body{
+      font-family: 'Overpass';
+
       min-width: 100vh;
       min-height: 100vh;
       background-color: var(--clr-very-dark-blue);
@@ -98,8 +106,39 @@
 
     }
 
+    .title{
+
+      font-family: 'Overpass';
+      font-size: var(--fs-200);
+      font-weight: var(--fw-700);
+      color: var(--clr-white)
+
+    }
+
+
+
     .circle-rating{
 
+    }
+
+    form{
+      /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 343px;
+    height: 127px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
     }
 
     .choice {
@@ -111,12 +150,14 @@
     padding: 20px;
     display: block;
   }
+
   span.scale-rating{
   margin: 5px 0 15px;
     display: inline-block;
 
     width: 100%;
 }
+
 
     span.circular-rating input[type=radio] {
     position:absolute;
@@ -146,8 +187,8 @@
       <img src="images/icon-star.svg" alt="">
     </div>
     <div class="info">
-      <h1>How did we do?</h1>
-      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <h1 class="title">How did we do?</h1>
+      <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <form>
       <span class="circle-rating">
         <label value="1">
