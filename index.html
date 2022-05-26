@@ -14,168 +14,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
 
-    /* @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); */
-
-    :root{
-      --clr-main: hsl(25, 97%, 53%);
-      --clr-white: hsl(0, 0%, 100%);
-      --clr-light-grey:hsl(217, 12%, 63%);
-      --clr-mid-grey:hsl(216, 12%, 54%);
-      --clr-dark-blue:hsl(213, 19%, 18%);
-      --clr-very-dark-blue: hsl(216, 12%, 8%);
-
-      --o-75:75%;
-      --o-50:50%;
-
-      --fs-100:1rem;
-      --fs-150:1.5rem;
-      --fs-200:2rem;
-
-      --fw-700:700;
-      --fw-400:400;
-
-      --s-mid:48px;
-      --s-big:51px;
-
-    }
-
-    *,
-    *::before,
-    *::after{
-    box-sizing: border-box;
-    }
-
-    *{
-      margin:0;
-      padding: 0;
-
-    }
-
-    body{
-      font-family: 'Overpass';
-
-      min-width: 100vh;
-      min-height: 100vh;
-      background-color: var(--clr-very-dark-blue);
-      display: grid;
-      place-items: center;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 32px 34px;
-      gap: 32px;
-
-      width: 413px;
-      height: 412.08px;
-
-      background: linear-gradient(180deg, #232A34 0%, #171E28 100%);
-      border-radius: 32px;
-
-    }
-
-    .star-circle{
-      width: var(--s-mid);
-      background-color: var(--clr-dark-blue) ;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 16px;
-      gap: 10px;
-
-      border-radius: 40px;
-    }
-
-    .info{
-      flex: none;
-      order: 1;
-      align-self: stretch;
-      flex-grow: 0;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0px;
-      gap: 24px;
-
-    }
-
-    .title{
-
-      font-family: 'Overpass';
-      font-size: var(--fs-200);
-      font-weight: var(--fw-700);
-      color: var(--clr-white)
-
-    }
-
-
-
-    .circle-rating{
-
-    }
-
-    form{
-      /* Auto layout */
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-
-    width: 343px;
-    height: 127px;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    }
-
-    .choice {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 20px;
-    display: block;
-  }
-
-  span.scale-rating{
-  margin: 5px 0 15px;
-    display: inline-block;
-
-    width: 100%;
-}
-
-
-    span.circular-rating input[type=radio] {
-    position:absolute;
-    -webkit-appearance: none;
-    opacity:0;
-    outline:0 !important;
-    /*border-right: 1px solid grey;*/
-    height:33px;
-    }
-
-    .circle-value {
-
-      background-color: var(--clr-dark-blue) 75% ;
-    }
-
-    .thanks{
-      display:none
-    }
   </style>
 </head>
 <body>
@@ -191,26 +30,21 @@
       <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <form>
       <span class="circle-rating">
-        <label value="1">
-          <input type="radio" name="rating">
-          <label class="circle-value"></label>
-        </label>
-        <label value="2">
-          <input type="radio" name="rating">
-          <label class="circle-value"></label>
-        </label>
-        <label value="3">
-          <input type="radio" name="rating">
-          <label class="circle-value"></label>
-        </label>
-        <label value="4">
-          <input type="radio" name="rating">
-          <label class="circle-value"></label>
-        </label>
-        <label value="5">
-          <input type="radio" name="rating">
-          <label class="circle-value"></label>
-        </label>
+
+        <input type="radio" name="rating" id="1" class="hidebox" value="1">
+        <label for="1" class="circle-value">1</label>
+
+        <input type="radio" name="rating" id="2" class="hidebox" value="1">
+        <label for="2" class="circle-value">2</label>
+
+        <input type="radio" name="rating" id="3" class="hidebox" value="1">
+        <label for="3" class="circle-value">3</label>
+
+        <input type="radio" name="rating" id="4" class="hidebox" value="1">
+        <label for="4" class="circle-value">4</label>
+
+        <input type="radio" name="rating" id="5" class="hidebox" value="1">
+        <label for="5" class="circle-value">5</label>
       </span>
       <input class="submit" type="submit" value="SUBMIT">
     </form>
