@@ -31,25 +31,84 @@
       --fw-700:700;
       --fw-400:400;
 
+      --s-mid:48px;
+      --s-big:51px;
+
+    }
+
+    *,
+    *::before,
+    *::after{
+    box-sizing: border-box;
+    }
+
+    *{
+      margin:0;
+      padding: 0;
 
     }
 
     body{
-      background-color: ;
+      min-width: 100vh;
+      min-height: 100vh;
+      background-color: var(--clr-very-dark-blue);
+      display: grid;
+      place-items: center;
     }
 
     .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 34px;
+      gap: 32px;
+
+      width: 413px;
+      height: 412.08px;
+
+      background: linear-gradient(180deg, #232A34 0%, #171E28 100%);
+      border-radius: 32px;
 
     }
 
-    .circle-value { }
+    .star-circle{
+      width: var(--s-mid);
+      background-color: var(--clr-dark-blue) ;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+      gap: 10px;
+
+      border-radius: 40px;
+    }
+
+    .info{
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
+    }
+
+    .circle-value {
+      background-color: var(--clr-dark-blue) 75% ;
+    }
+
+    .thanks{
+      display:none
+    }
   </style>
 </head>
 <body>
 
   <!-- Rating state start -->
 <div class="container">
-  <div>
+  <!-- <div> -->
+    <div class="star-circle">
+      <img src="images/icon-star.svg" alt="">
+    </div>
+    <div class="info">
     <h1>How did we do?</h1>
     <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <form>
@@ -77,23 +136,26 @@
       </span>
       <input class="submit" type="submit" value="SUBMIT">
     </form>
-
+  <!-- </div> -->
   </div>
-</div class="container">
-
-
-  Submit
+</div>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
+  <div class="thanks">
+    <img src="" alt="">
+    <div>
+      <p>You selected <!-- Add rating here --> out of 5</p>
+    </div>
+    <div>
+      <h1>Thank you!</h1>
+      <p>  We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+  </div>
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
 
   <!-- Thank you state end -->
 
