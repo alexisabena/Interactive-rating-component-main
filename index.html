@@ -89,9 +89,46 @@
       order: 1;
       align-self: stretch;
       flex-grow: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 24px;
+
+    }
+
+    .circle-rating{
+
+    }
+
+    .choice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    display: block;
+  }
+  span.scale-rating{
+  margin: 5px 0 15px;
+    display: inline-block;
+
+    width: 100%;
+}
+
+    span.circular-rating input[type=radio] {
+    position:absolute;
+    -webkit-appearance: none;
+    opacity:0;
+    outline:0 !important;
+    /*border-right: 1px solid grey;*/
+    height:33px;
     }
 
     .circle-value {
+
       background-color: var(--clr-dark-blue) 75% ;
     }
 
@@ -109,8 +146,8 @@
       <img src="images/icon-star.svg" alt="">
     </div>
     <div class="info">
-    <h1>How did we do?</h1>
-    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <form>
       <span class="circle-rating">
         <label value="1">
@@ -136,7 +173,6 @@
       </span>
       <input class="submit" type="submit" value="SUBMIT">
     </form>
-  <!-- </div> -->
   </div>
 </div>
 
