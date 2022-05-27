@@ -143,19 +143,19 @@ flex-grow: 0;
 
 span.circle-rating {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
 
-    width: 100%;
-    height: 52px;
+width: 100%;
+height: 52px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 .hidebox{
@@ -179,24 +179,26 @@ border-radius: 32px;
 color:var(--clr-light-grey);
 font-weight: var(--fw-700);
 
-transition: all 0.3s ease-in;
+transition: all 0.15s ease-in;
 
 }
 
 .circle-value:hover {
-    background: var(--clr-light-grey);
-    opacity: 1;
-    color: var(--clr-white);
+background: var(--clr-main);
+opacity: 1;
+color: var(--clr-white);
 
 }
 
 input[type=radio]:checked+ .circle-value{
-    background: var(--clr-main);
-    opacity: 1;
-    color: var(--clr-white);
+background: var(--clr-light-grey);
+opacity: 1;
+color: var(--clr-white);
 
 }
 .submit{
+
+    width: 100%;
 
 }
 
