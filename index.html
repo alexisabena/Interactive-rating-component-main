@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
 
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -22,32 +23,46 @@
   <!-- Rating state start -->
 <div class="container">
   <!-- <div> -->
-    <div class="star-circle">
-      <img src="images/icon-star.svg" alt="">
+    <div id="rating-form" class="visible">
+      <div class="star-circle">
+        <img src="images/icon-star.svg" alt="">
+      </div>
+      <div class="info">
+        <h1 class="title">How did we do?</h1>
+        <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <form name="rating-form" id="rating-form" action="/script.js" method="get" onsubmit="return rating_value()">
+        <span class="circle-rating">
+
+          <input type="radio" name="rating" id="1" class="hidebox" value="1">
+          <label for="1" class="circle-value">1</label>
+
+          <input type="radio" name="rating" id="2" class="hidebox" value="1">
+          <label for="2" class="circle-value">2</label>
+
+          <input type="radio" name="rating" id="3" class="hidebox" value="1">
+          <label for="3" class="circle-value">3</label>
+
+          <input type="radio" name="rating" id="4" class="hidebox" value="1">
+          <label for="4" class="circle-value">4</label>
+
+          <input type="radio" name="rating" id="5" class="hidebox" value="1">
+          <label for="5" class="circle-value">5</label>
+        </span>
+        <input class="submit" type="submit" value="SUBMIT">
+      </form>
+      </div>
     </div>
-    <div class="info">
-      <h1 class="title">How did we do?</h1>
-      <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    <form>
-      <span class="circle-rating">
-
-        <input type="radio" name="rating" id="1" class="hidebox" value="1">
-        <label for="1" class="circle-value">1</label>
-
-        <input type="radio" name="rating" id="2" class="hidebox" value="1">
-        <label for="2" class="circle-value">2</label>
-
-        <input type="radio" name="rating" id="3" class="hidebox" value="1">
-        <label for="3" class="circle-value">3</label>
-
-        <input type="radio" name="rating" id="4" class="hidebox" value="1">
-        <label for="4" class="circle-value">4</label>
-
-        <input type="radio" name="rating" id="5" class="hidebox" value="1">
-        <label for="5" class="circle-value">5</label>
-      </span>
-      <input class="submit" type="submit" value="SUBMIT">
-    </form>
+    <div class="thanks invisible">
+      <img src="" alt="">
+      <div class="result">
+        <p class="result-txt">You selected $() out of 5</p>
+      </div>
+      <div>
+        <h1>Thank you!</h1>
+        <p>  We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -55,17 +70,7 @@
 
   <!-- Thank you state start -->
 
-  <div class="thanks">
-    <img src="" alt="">
-    <div>
-      <p>You selected <!-- Add rating here --> out of 5</p>
-    </div>
-    <div>
-      <h1>Thank you!</h1>
-      <p>  We appreciate you taking the time to give a rating. If you ever need more support,
-        don’t hesitate to get in touch!</p>
-    </div>
-  </div>
+
 
 
   <!-- Thank you state end -->
