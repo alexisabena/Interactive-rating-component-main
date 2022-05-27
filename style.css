@@ -10,7 +10,7 @@ position: absolute;
 width: auto;
 height: 44px;
 left: calc(50% - 405/2);
-top: 831.2px;
+bottom: 24.88px;
 
 background: rgb(57, 71, 95,.5);
 border-radius: 24px;
@@ -199,7 +199,34 @@ color: var(--clr-white);
 .submit{
 
     width: 100%;
+    padding: 16px;
+    /* height: 52px; */
+    border-radius: 32px;
 
+    font-weight: var(--fw-700);
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    border: none;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+
+.submit:hover{
+
+    width: 100%;
+    padding: 16px;
+    /* height: 52px; */
+    border-radius: 32px;
+
+    font-weight: var(--fw-700);
+    color: var(--clr-main);
+    background-color: var(--clr-white);
+    border-color: none;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2em;
 }
 
 .thanks{
