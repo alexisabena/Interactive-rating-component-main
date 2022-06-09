@@ -19,11 +19,11 @@
   </style>
 </head>
 <body>
-
+  <script src="./app.js"></script>
   <!-- Rating state start -->
 <div class="container">
   <!-- <div> -->
-    <div id="main-form" class="visible">
+    <div id="main-form" class="reveal">
       <div class="star-circle">
         <img src="images/icon-star.svg" alt="">
       </div>
@@ -48,16 +48,16 @@
           <input type="radio" name="rating" id="5" class="hidebox" value="5">
           <label for="5" class="circle-value">5</label>
         </span>
-        <input class="submit" type="submit" value="SUBMIT">
+        <input class="submit" type="submit" value="SUBMIT" onclick="revealContent()" >
       </form>
       </div>
     </div>
-    <div class="thanks invisible">
-      <img src="" alt="">
+    <div class="thanks hidden-content" id="thanks">
+      <img src="images/illustration-thank-you.svg" alt="" class="center">
       <div class="result">
         <p class="result-txt">You selected $() out of 5</p>
       </div>
-      <div>
+      <div class="thanks-text">
         <h1>Thank you!</h1>
         <p>  We appreciate you taking the time to give a rating. If you ever need more support,
           don’t hesitate to get in touch!</p>
@@ -81,6 +81,6 @@
     Coded by <a href="#">Alexis Abena</a>.
   </div>
 
-  <script src="app.js"></script>
+
 </body>
 </html>
